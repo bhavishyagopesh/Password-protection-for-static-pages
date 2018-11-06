@@ -1,1734 +1,2320 @@
+<h1 id="runtime-performance-comparison-of-vis-a-vis">Runtime performance comparison of vis-a-vis </h1>
 <table>
+<caption>Full Table of Comparison between Sparse-Count and .</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Benchmark</th>
-<th style="text-align: left;">Time-SparseCount</th>
-<th style="text-align: left;">Time-SparseCount2</th>
-<th style="text-align: left;">Ratio of runtimes</th>
+<th style="text-align: left;">Vars</th>
+<th style="text-align: left;">Clauses</th>
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Speedup</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">01A-1.cnf</td>
+<td style="text-align: left;">01A-1</td>
+<td style="text-align: left;">2286</td>
+<td style="text-align: left;">8823</td>
 <td style="text-align: left;">594.43</td>
 <td style="text-align: left;">252.73</td>
 <td style="text-align: left;">2.35</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">02A-1.cnf</td>
+<td style="text-align: left;">02A-1</td>
+<td style="text-align: left;">2226</td>
+<td style="text-align: left;">8579</td>
 <td style="text-align: left;">740.13</td>
 <td style="text-align: left;">272.13</td>
 <td style="text-align: left;">2.72</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">02A-2.cnf</td>
+<td style="text-align: left;">02A-2</td>
+<td style="text-align: left;">3857</td>
+<td style="text-align: left;">15028</td>
 <td style="text-align: left;">239.44</td>
 <td style="text-align: left;">0.09</td>
 <td style="text-align: left;">2660.44</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">02A-3.cnf</td>
+<td style="text-align: left;">02A-3</td>
+<td style="text-align: left;">5488</td>
+<td style="text-align: left;">21477</td>
 <td style="text-align: left;">182.74</td>
 <td style="text-align: left;">0.07</td>
 <td style="text-align: left;">2610.57</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">03A-1.cnf</td>
+<td style="text-align: left;">03A-1</td>
+<td style="text-align: left;">1466</td>
+<td style="text-align: left;">5236</td>
 <td style="text-align: left;">121.83</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">6091.50</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">03A-2.cnf</td>
+<td style="text-align: left;">03A-2</td>
+<td style="text-align: left;">2539</td>
+<td style="text-align: left;">9168</td>
 <td style="text-align: left;">2.16</td>
 <td style="text-align: left;">0.03</td>
 <td style="text-align: left;">72.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">04A-1.cnf</td>
+<td style="text-align: left;">04A-1</td>
+<td style="text-align: left;">2223</td>
+<td style="text-align: left;">8758</td>
 <td style="text-align: left;">615.24</td>
 <td style="text-align: left;">258.3</td>
 <td style="text-align: left;">2.38</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">04A-2.cnf</td>
+<td style="text-align: left;">04A-2</td>
+<td style="text-align: left;">3882</td>
+<td style="text-align: left;">15325</td>
 <td style="text-align: left;">298.76</td>
 <td style="text-align: left;">0.12</td>
 <td style="text-align: left;">2489.67</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">04A-3.cnf</td>
+<td style="text-align: left;">04A-3</td>
+<td style="text-align: left;">5541</td>
+<td style="text-align: left;">21892</td>
 <td style="text-align: left;">28.32</td>
 <td style="text-align: left;">0.09</td>
 <td style="text-align: left;">314.67</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">05A-1.cnf</td>
+<td style="text-align: left;">05A-1</td>
+<td style="text-align: left;">2286</td>
+<td style="text-align: left;">8823</td>
 <td style="text-align: left;">554.45</td>
 <td style="text-align: left;">284.86</td>
 <td style="text-align: left;">1.95</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">05A-2.cnf</td>
+<td style="text-align: left;">05A-2</td>
+<td style="text-align: left;">3977</td>
+<td style="text-align: left;">15486</td>
 <td style="text-align: left;">95.58</td>
 <td style="text-align: left;">0.04</td>
 <td style="text-align: left;">2389.50</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">06A-1.cnf</td>
+<td style="text-align: left;">06A-1</td>
+<td style="text-align: left;">2226</td>
+<td style="text-align: left;">8579</td>
 <td style="text-align: left;">365.7</td>
 <td style="text-align: left;">257.48</td>
 <td style="text-align: left;">1.42</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">06A-2.cnf</td>
+<td style="text-align: left;">06A-2</td>
+<td style="text-align: left;">3857</td>
+<td style="text-align: left;">15028</td>
 <td style="text-align: left;">305.16</td>
 <td style="text-align: left;">0.1</td>
 <td style="text-align: left;">3051.60</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">06A-3.cnf</td>
+<td style="text-align: left;">06A-3</td>
+<td style="text-align: left;">5488</td>
+<td style="text-align: left;">21477</td>
 <td style="text-align: left;">183.14</td>
 <td style="text-align: left;">0.11</td>
 <td style="text-align: left;">1664.91</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">06A-4.cnf</td>
+<td style="text-align: left;">06A-4</td>
+<td style="text-align: left;">7119</td>
+<td style="text-align: left;">27926</td>
 <td style="text-align: left;">169.46</td>
 <td style="text-align: left;">0.12</td>
 <td style="text-align: left;">1412.17</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">07A-1.cnf</td>
+<td style="text-align: left;">07A-1</td>
+<td style="text-align: left;">3067</td>
+<td style="text-align: left;">12252</td>
 <td style="text-align: left;">1976.02</td>
 <td style="text-align: left;">565.59</td>
 <td style="text-align: left;">3.49</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">07A-2.cnf</td>
+<td style="text-align: left;">07A-2</td>
+<td style="text-align: left;">5388</td>
+<td style="text-align: left;">21777</td>
 <td style="text-align: left;">1690.63</td>
 <td style="text-align: left;">744.77</td>
 <td style="text-align: left;">2.27</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">07A-3.cnf</td>
+<td style="text-align: left;">07A-3</td>
+<td style="text-align: left;">7709</td>
+<td style="text-align: left;">31302</td>
 <td style="text-align: left;">1296.13</td>
 <td style="text-align: left;">865.08</td>
 <td style="text-align: left;">1.50</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">07A-4.cnf</td>
+<td style="text-align: left;">07A-4</td>
+<td style="text-align: left;">10030</td>
+<td style="text-align: left;">40827</td>
 <td style="text-align: left;">763.99</td>
 <td style="text-align: left;">666.33</td>
 <td style="text-align: left;">1.15</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">07A-5.cnf</td>
+<td style="text-align: left;">07A-5</td>
+<td style="text-align: left;">12351</td>
+<td style="text-align: left;">50352</td>
 <td style="text-align: left;">183.98</td>
 <td style="text-align: left;">0.22</td>
 <td style="text-align: left;">836.27</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">08A-1.cnf</td>
+<td style="text-align: left;">08A-1</td>
+<td style="text-align: left;">3127</td>
+<td style="text-align: left;">12496</td>
 <td style="text-align: left;">3580.48</td>
 <td style="text-align: left;">627.58</td>
 <td style="text-align: left;">5.71</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">08A-2.cnf</td>
+<td style="text-align: left;">08A-2</td>
+<td style="text-align: left;">5508</td>
+<td style="text-align: left;">22235</td>
 <td style="text-align: left;">1679.79</td>
 <td style="text-align: left;">739.28</td>
 <td style="text-align: left;">2.27</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">08A-3.cnf</td>
+<td style="text-align: left;">08A-3</td>
+<td style="text-align: left;">7889</td>
+<td style="text-align: left;">31974</td>
 <td style="text-align: left;">771.43</td>
 <td style="text-align: left;">856.8</td>
 <td style="text-align: left;">0.90</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">08A-4.cnf</td>
+<td style="text-align: left;">08A-4</td>
+<td style="text-align: left;">10270</td>
+<td style="text-align: left;">41713</td>
 <td style="text-align: left;">267.89</td>
 <td style="text-align: left;">0.24</td>
 <td style="text-align: left;">1116.21</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">09A-1.cnf</td>
+<td style="text-align: left;">09A-1</td>
+<td style="text-align: left;">3697</td>
+<td style="text-align: left;">15521</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1003.76</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">09A-2.cnf</td>
+<td style="text-align: left;">09A-2</td>
+<td style="text-align: left;">6559</td>
+<td style="text-align: left;">27796</td>
 <td style="text-align: left;">677.37</td>
 <td style="text-align: left;">1749.41</td>
 <td style="text-align: left;">0.39</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">09A-3.cnf</td>
+<td style="text-align: left;">09A-3</td>
+<td style="text-align: left;">9421</td>
+<td style="text-align: left;">40071</td>
 <td style="text-align: left;">146.66</td>
 <td style="text-align: left;">0.31</td>
 <td style="text-align: left;">473.10</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">10A-1.cnf</td>
+<td style="text-align: left;">10A-1</td>
+<td style="text-align: left;">3169</td>
+<td style="text-align: left;">12268</td>
 <td style="text-align: left;">3023.19</td>
 <td style="text-align: left;">547.52</td>
 <td style="text-align: left;">5.52</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">10A-2.cnf</td>
+<td style="text-align: left;">10A-2</td>
+<td style="text-align: left;">5363</td>
+<td style="text-align: left;">20879</td>
 <td style="text-align: left;">1079.16</td>
 <td style="text-align: left;">584.09</td>
 <td style="text-align: left;">1.85</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">10A-3.cnf</td>
+<td style="text-align: left;">10A-3</td>
+<td style="text-align: left;">7557</td>
+<td style="text-align: left;">29490</td>
 <td style="text-align: left;">1073.0</td>
 <td style="text-align: left;">701.61</td>
 <td style="text-align: left;">1.53</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">10A-4.cnf</td>
+<td style="text-align: left;">10A-4</td>
+<td style="text-align: left;">9751</td>
+<td style="text-align: left;">38101</td>
 <td style="text-align: left;">136.43</td>
 <td style="text-align: left;">0.27</td>
 <td style="text-align: left;">505.30</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">11A-1.cnf</td>
+<td style="text-align: left;">11A-1</td>
+<td style="text-align: left;">2712</td>
+<td style="text-align: left;">10283</td>
 <td style="text-align: left;">1049.58</td>
 <td style="text-align: left;">611.52</td>
 <td style="text-align: left;">1.72</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">11A-2.cnf</td>
+<td style="text-align: left;">11A-2</td>
+<td style="text-align: left;">4577</td>
+<td style="text-align: left;">17436</td>
 <td style="text-align: left;">793.73</td>
 <td style="text-align: left;">606.25</td>
 <td style="text-align: left;">1.31</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">11A-3.cnf</td>
+<td style="text-align: left;">11A-3</td>
+<td style="text-align: left;">6442</td>
+<td style="text-align: left;">24589</td>
 <td style="text-align: left;">787.15</td>
 <td style="text-align: left;">683.61</td>
 <td style="text-align: left;">1.15</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">11A-4.cnf</td>
+<td style="text-align: left;">11A-4</td>
+<td style="text-align: left;">8307</td>
+<td style="text-align: left;">31742</td>
 <td style="text-align: left;">120.86</td>
 <td style="text-align: left;">0.16</td>
 <td style="text-align: left;">755.38</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">12A-1.cnf</td>
+<td style="text-align: left;">12A-1</td>
+<td style="text-align: left;">2712</td>
+<td style="text-align: left;">10283</td>
 <td style="text-align: left;">1027.07</td>
 <td style="text-align: left;">555.01</td>
 <td style="text-align: left;">1.85</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">12A-2.cnf</td>
+<td style="text-align: left;">12A-2</td>
+<td style="text-align: left;">4577</td>
+<td style="text-align: left;">17436</td>
 <td style="text-align: left;">879.09</td>
 <td style="text-align: left;">583.64</td>
 <td style="text-align: left;">1.51</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">12A-3.cnf</td>
+<td style="text-align: left;">12A-3</td>
+<td style="text-align: left;">6442</td>
+<td style="text-align: left;">24589</td>
 <td style="text-align: left;">869.33</td>
 <td style="text-align: left;">645.44</td>
 <td style="text-align: left;">1.35</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">12A-4.cnf</td>
+<td style="text-align: left;">12A-4</td>
+<td style="text-align: left;">8307</td>
+<td style="text-align: left;">31742</td>
 <td style="text-align: left;">126.35</td>
 <td style="text-align: left;">0.16</td>
 <td style="text-align: left;">789.69</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">13A-1.cnf</td>
+<td style="text-align: left;">13A-1</td>
+<td style="text-align: left;">4857</td>
+<td style="text-align: left;">20646</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1604.5</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">13A-2.cnf</td>
+<td style="text-align: left;">13A-2</td>
+<td style="text-align: left;">8735</td>
+<td style="text-align: left;">37587</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">2226.1</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">13A-3.cnf</td>
+<td style="text-align: left;">13A-3</td>
+<td style="text-align: left;">12613</td>
+<td style="text-align: left;">54528</td>
 <td style="text-align: left;">4868.04</td>
 <td style="text-align: left;">2553.25</td>
 <td style="text-align: left;">1.91</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">13A-4.cnf</td>
+<td style="text-align: left;">13A-4</td>
+<td style="text-align: left;">16491</td>
+<td style="text-align: left;">71469</td>
 <td style="text-align: left;">281.82</td>
 <td style="text-align: left;">1.26</td>
 <td style="text-align: left;">223.67</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">14A-3.cnf</td>
+<td style="text-align: left;">14A-3</td>
+<td style="text-align: left;">16344</td>
+<td style="text-align: left;">70048</td>
 <td style="text-align: left;">1551.14</td>
 <td style="text-align: left;">2060.99</td>
 <td style="text-align: left;">0.75</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">17A-1.cnf</td>
+<td style="text-align: left;">17A-1</td>
+<td style="text-align: left;">5421</td>
+<td style="text-align: left;">22751</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1382.69</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">17A-2.cnf</td>
+<td style="text-align: left;">17A-2</td>
+<td style="text-align: left;">9607</td>
+<td style="text-align: left;">40791</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">3039.46</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">17A-4.cnf</td>
+<td style="text-align: left;">17A-4</td>
+<td style="text-align: left;">17979</td>
+<td style="text-align: left;">76871</td>
 <td style="text-align: left;">3608.07</td>
 <td style="text-align: left;">4552.91</td>
 <td style="text-align: left;">0.79</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">17A-5.cnf</td>
+<td style="text-align: left;">17A-5</td>
+<td style="text-align: left;">22165</td>
+<td style="text-align: left;">94911</td>
 <td style="text-align: left;">898.36</td>
 <td style="text-align: left;">2422.47</td>
 <td style="text-align: left;">0.37</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">17A-6.cnf</td>
+<td style="text-align: left;">17A-6</td>
+<td style="text-align: left;">26351</td>
+<td style="text-align: left;">112951</td>
 <td style="text-align: left;">906.43</td>
 <td style="text-align: left;">1743.32</td>
 <td style="text-align: left;">0.52</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">36.sk_3_77.cnf</td>
+<td style="text-align: left;">36.sk_3_77</td>
+<td style="text-align: left;">8047</td>
+<td style="text-align: left;">28733</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">2.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">4step.cnf</td>
+<td style="text-align: left;">4step</td>
+<td style="text-align: left;">165</td>
+<td style="text-align: left;">418</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">2530.15</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">5step.cnf</td>
+<td style="text-align: left;">5step</td>
+<td style="text-align: left;">177</td>
+<td style="text-align: left;">475</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1045.19</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">75-21-9-q.cnf</td>
+<td style="text-align: left;">75-21-9-q</td>
+<td style="text-align: left;">2121</td>
+<td style="text-align: left;">3360</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">2.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">75-24-2-q.cnf</td>
+<td style="text-align: left;">75-24-2-q</td>
+<td style="text-align: left;">2784</td>
+<td style="text-align: left;">4416</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">2.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">79.sk_4_40.cnf</td>
+<td style="text-align: left;">79.sk_4_40</td>
+<td style="text-align: left;">5707</td>
+<td style="text-align: left;">21005</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">1.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">90-19-5-q.cnf</td>
+<td style="text-align: left;">90-19-5-q</td>
+<td style="text-align: left;">1729</td>
+<td style="text-align: left;">2736</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">2.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">90-19-9-q.cnf</td>
+<td style="text-align: left;">90-19-9-q</td>
+<td style="text-align: left;">1729</td>
+<td style="text-align: left;">2736</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">1.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">90-21-4-q.cnf</td>
+<td style="text-align: left;">90-21-4-q</td>
+<td style="text-align: left;">2121</td>
+<td style="text-align: left;">3360</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">2.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">90-21-6-q.cnf</td>
+<td style="text-align: left;">90-21-6-q</td>
+<td style="text-align: left;">2121</td>
+<td style="text-align: left;">3360</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">2.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">90-21-8-q.cnf</td>
+<td style="text-align: left;">90-21-8-q</td>
+<td style="text-align: left;">2121</td>
+<td style="text-align: left;">3360</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">2.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">90-22-8-q.cnf</td>
+<td style="text-align: left;">90-22-8-q</td>
+<td style="text-align: left;">2332</td>
+<td style="text-align: left;">3696</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">2.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">90-23-9-q.cnf</td>
+<td style="text-align: left;">90-23-9-q</td>
+<td style="text-align: left;">2553</td>
+<td style="text-align: left;">4048</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">2.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">90-24-1-q.cnf</td>
+<td style="text-align: left;">90-24-1-q</td>
+<td style="text-align: left;">2784</td>
+<td style="text-align: left;">4416</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">2.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">90-24-6-q.cnf</td>
+<td style="text-align: left;">90-24-6-q</td>
+<td style="text-align: left;">2784</td>
+<td style="text-align: left;">4416</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">2.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">90-26-1-q.cnf</td>
+<td style="text-align: left;">90-26-1-q</td>
+<td style="text-align: left;">3276</td>
+<td style="text-align: left;">5200</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">2.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">90-26-2-q.cnf</td>
+<td style="text-align: left;">90-26-2-q</td>
+<td style="text-align: left;">3276</td>
+<td style="text-align: left;">5200</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">2.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">90-26-7-q.cnf</td>
+<td style="text-align: left;">90-26-7-q</td>
+<td style="text-align: left;">3276</td>
+<td style="text-align: left;">5200</td>
 <td style="text-align: left;">0.02</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">2.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">90-34-8-q.cnf</td>
+<td style="text-align: left;">90-34-8-q</td>
+<td style="text-align: left;">5644</td>
+<td style="text-align: left;">8976</td>
 <td style="text-align: left;">0.03</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">3.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">90-46-10-q.cnf</td>
+<td style="text-align: left;">90-46-10-q</td>
+<td style="text-align: left;">10396</td>
+<td style="text-align: left;">16560</td>
 <td style="text-align: left;">0.04</td>
 <td style="text-align: left;">0.03</td>
 <td style="text-align: left;">1.33</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">90-50-2-q.cnf</td>
+<td style="text-align: left;">90-50-2-q</td>
+<td style="text-align: left;">12300</td>
+<td style="text-align: left;">19600</td>
 <td style="text-align: left;">0.05</td>
 <td style="text-align: left;">0.04</td>
 <td style="text-align: left;">1.25</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">90-50-7-q.cnf</td>
+<td style="text-align: left;">90-50-7-q</td>
+<td style="text-align: left;">12300</td>
+<td style="text-align: left;">19600</td>
 <td style="text-align: left;">0.05</td>
 <td style="text-align: left;">0.04</td>
 <td style="text-align: left;">1.25</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">ActivityService2.sk_10_27.cnf</td>
+<td style="text-align: left;">ActivityService2.sk_10_27</td>
+<td style="text-align: left;">1952</td>
+<td style="text-align: left;">6867</td>
 <td style="text-align: left;">4590.69</td>
 <td style="text-align: left;">222.95</td>
 <td style="text-align: left;">20.59</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">blasted_case132.cnf</td>
+<td style="text-align: left;">blasted_case132</td>
+<td style="text-align: left;">236</td>
+<td style="text-align: left;">708</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1143.42</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">blasted_case135.cnf</td>
+<td style="text-align: left;">blasted_case135</td>
+<td style="text-align: left;">236</td>
+<td style="text-align: left;">708</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">841.44</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">blasted_squaring50.cnf</td>
+<td style="text-align: left;">blasted_squaring50</td>
+<td style="text-align: left;">500</td>
+<td style="text-align: left;">1965</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">710.22</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">blasted_squaring51.cnf</td>
+<td style="text-align: left;">blasted_squaring51</td>
+<td style="text-align: left;">496</td>
+<td style="text-align: left;">1947</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">745.12</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_10int_N=200_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_10int_8fract_p1_N=200_MAX=4over</td>
+<td style="text-align: left;">92058</td>
+<td style="text-align: left;">53094</td>
 <td style="text-align: left;">0.14</td>
 <td style="text-align: left;">0.13</td>
 <td style="text-align: left;">1.08</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_10int_N=200_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_10int_8fract_p1_N=200_MAX=4under</td>
+<td style="text-align: left;">91722</td>
+<td style="text-align: left;">52828</td>
 <td style="text-align: left;">0.14</td>
 <td style="text-align: left;">0.12</td>
 <td style="text-align: left;">1.17</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_12int_N=1000_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_12int_8fract_p1_N=1000_MAX=4over</td>
+<td style="text-align: left;">105601</td>
+<td style="text-align: left;">63606</td>
 <td style="text-align: left;">0.17</td>
 <td style="text-align: left;">0.15</td>
 <td style="text-align: left;">1.13</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_12int_N=1000_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_12int_8fract_p1_N=1000_MAX=4under</td>
+<td style="text-align: left;">105265</td>
+<td style="text-align: left;">63340</td>
 <td style="text-align: left;">0.16</td>
 <td style="text-align: left;">0.14</td>
 <td style="text-align: left;">1.14</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_12int_N=400_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_12int_8fract_p1_N=400_MAX=4over</td>
+<td style="text-align: left;">104695</td>
+<td style="text-align: left;">62931</td>
 <td style="text-align: left;">0.15</td>
 <td style="text-align: left;">0.14</td>
 <td style="text-align: left;">1.07</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_12int_N=400_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_12int_8fract_p1_N=400_MAX=4under</td>
+<td style="text-align: left;">104359</td>
+<td style="text-align: left;">62665</td>
 <td style="text-align: left;">0.15</td>
 <td style="text-align: left;">0.14</td>
 <td style="text-align: left;">1.07</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_12int_N=600_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_12int_8fract_p1_N=600_MAX=4over</td>
+<td style="text-align: left;">104970</td>
+<td style="text-align: left;">62814</td>
 <td style="text-align: left;">0.14</td>
 <td style="text-align: left;">0.16</td>
 <td style="text-align: left;">0.88</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_12int_N=600_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_12int_8fract_p1_N=600_MAX=4under</td>
+<td style="text-align: left;">104634</td>
+<td style="text-align: left;">62548</td>
 <td style="text-align: left;">0.15</td>
 <td style="text-align: left;">0.14</td>
 <td style="text-align: left;">1.07</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_12int_N=800_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_12int_8fract_p1_N=800_MAX=4over</td>
+<td style="text-align: left;">104358</td>
+<td style="text-align: left;">62790</td>
 <td style="text-align: left;">0.16</td>
 <td style="text-align: left;">0.14</td>
 <td style="text-align: left;">1.14</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_12int_N=800_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_12int_8fract_p1_N=800_MAX=4under</td>
+<td style="text-align: left;">104022</td>
+<td style="text-align: left;">62524</td>
 <td style="text-align: left;">0.16</td>
 <td style="text-align: left;">0.14</td>
 <td style="text-align: left;">1.14</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_13int_N=2000_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_13int_8fract_p1_N=2000_MAX=4over</td>
+<td style="text-align: left;">112192</td>
+<td style="text-align: left;">68867</td>
 <td style="text-align: left;">0.16</td>
 <td style="text-align: left;">0.15</td>
 <td style="text-align: left;">1.07</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_13int_N=2000_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_13int_8fract_p1_N=2000_MAX=4under</td>
+<td style="text-align: left;">111856</td>
+<td style="text-align: left;">68601</td>
 <td style="text-align: left;">0.19</td>
 <td style="text-align: left;">0.15</td>
 <td style="text-align: left;">1.27</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_14int_N=3000_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_14int_8fract_p1_N=3000_MAX=4over</td>
+<td style="text-align: left;">115866</td>
+<td style="text-align: left;">70349</td>
 <td style="text-align: left;">0.18</td>
 <td style="text-align: left;">0.17</td>
 <td style="text-align: left;">1.06</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_14int_N=3000_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_14int_8fract_p1_N=3000_MAX=4under</td>
+<td style="text-align: left;">115530</td>
+<td style="text-align: left;">70083</td>
 <td style="text-align: left;">0.18</td>
 <td style="text-align: left;">0.2</td>
 <td style="text-align: left;">0.90</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_14int_N=4000_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_14int_8fract_p1_N=4000_MAX=4over</td>
+<td style="text-align: left;">115889</td>
+<td style="text-align: left;">70842</td>
 <td style="text-align: left;">0.17</td>
 <td style="text-align: left;">0.16</td>
 <td style="text-align: left;">1.06</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_14int_N=4000_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_14int_8fract_p1_N=4000_MAX=4under</td>
+<td style="text-align: left;">115553</td>
+<td style="text-align: left;">70576</td>
 <td style="text-align: left;">0.18</td>
 <td style="text-align: left;">0.15</td>
 <td style="text-align: left;">1.20</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_14int_N=5000_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_14int_8fract_p1_N=5000_MAX=4over</td>
+<td style="text-align: left;">116874</td>
+<td style="text-align: left;">71444</td>
 <td style="text-align: left;">0.18</td>
 <td style="text-align: left;">0.17</td>
 <td style="text-align: left;">1.06</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_14int_N=5000_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_14int_8fract_p1_N=5000_MAX=4under</td>
+<td style="text-align: left;">116538</td>
+<td style="text-align: left;">71178</td>
 <td style="text-align: left;">0.18</td>
 <td style="text-align: left;">0.17</td>
 <td style="text-align: left;">1.06</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_22int_N=1000000_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_22int_8fract_p1_N=1000000_MAX=4over</td>
+<td style="text-align: left;">190121</td>
+<td style="text-align: left;">131051</td>
 <td style="text-align: left;">0.27</td>
 <td style="text-align: left;">0.27</td>
 <td style="text-align: left;">1.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_22int_N=1000000_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_22int_8fract_p1_N=1000000_MAX=4under</td>
+<td style="text-align: left;">189785</td>
+<td style="text-align: left;">130785</td>
 <td style="text-align: left;">0.25</td>
 <td style="text-align: left;">0.28</td>
 <td style="text-align: left;">0.89</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_22int_N=100000_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_22int_8fract_p1_N=100000_MAX=4over</td>
+<td style="text-align: left;">192136</td>
+<td style="text-align: left;">132737</td>
 <td style="text-align: left;">0.26</td>
 <td style="text-align: left;">0.28</td>
 <td style="text-align: left;">0.93</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_22int_N=100000_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_22int_8fract_p1_N=100000_MAX=4under</td>
+<td style="text-align: left;">191800</td>
+<td style="text-align: left;">132471</td>
 <td style="text-align: left;">0.26</td>
 <td style="text-align: left;">0.25</td>
 <td style="text-align: left;">1.04</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_22int_N=10000_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_22int_8fract_p1_N=10000_MAX=4over</td>
+<td style="text-align: left;">194193</td>
+<td style="text-align: left;">134360</td>
 <td style="text-align: left;">0.26</td>
 <td style="text-align: left;">0.27</td>
 <td style="text-align: left;">0.96</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_22int_N=10000_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_22int_8fract_p1_N=10000_MAX=4under</td>
+<td style="text-align: left;">193857</td>
+<td style="text-align: left;">134094</td>
 <td style="text-align: left;">0.25</td>
 <td style="text-align: left;">0.23</td>
 <td style="text-align: left;">1.09</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_26int_N=10000000_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_26int_8fract_p1_N=10000000_MAX=4over</td>
+<td style="text-align: left;">234427</td>
+<td style="text-align: left;">167688</td>
 <td style="text-align: left;">0.33</td>
 <td style="text-align: left;">0.32</td>
 <td style="text-align: left;">1.03</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_26int_N=10000000_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_26int_8fract_p1_N=10000000_MAX=4under</td>
+<td style="text-align: left;">234091</td>
+<td style="text-align: left;">167422</td>
 <td style="text-align: left;">0.32</td>
 <td style="text-align: left;">0.33</td>
 <td style="text-align: left;">0.97</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_30int_N=100000000_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_30int_8fract_p1_N=100000000_MAX=4over</td>
+<td style="text-align: left;">277812</td>
+<td style="text-align: left;">203814</td>
 <td style="text-align: left;">0.4</td>
 <td style="text-align: left;">0.37</td>
 <td style="text-align: left;">1.08</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_30int_N=100000000_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_30int_8fract_p1_N=100000000_MAX=4under</td>
+<td style="text-align: left;">277476</td>
+<td style="text-align: left;">203548</td>
 <td style="text-align: left;">0.39</td>
 <td style="text-align: left;">0.37</td>
 <td style="text-align: left;">1.05</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">brp.pm_8int_N=32_MAX=4over.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_8int_8fract_p1_N=32_MAX=4over</td>
+<td style="text-align: left;">80448</td>
+<td style="text-align: left;">44943</td>
 <td style="text-align: left;">0.12</td>
 <td style="text-align: left;">0.12</td>
 <td style="text-align: left;">1.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">brp.pm_8int_N=32_MAX=4under.dimacs</td>
+<td style="text-align: left;">brp.pm_14steps_8int_8fract_p1_N=32_MAX=4under</td>
+<td style="text-align: left;">80112</td>
+<td style="text-align: left;">44677</td>
 <td style="text-align: left;">0.13</td>
 <td style="text-align: left;">0.13</td>
 <td style="text-align: left;">1.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">diagStencilClean.sk_41_36.cnf</td>
+<td style="text-align: left;">diagStencilClean.sk_41_36</td>
+<td style="text-align: left;">378131</td>
+<td style="text-align: left;">2110471</td>
 <td style="text-align: left;">453.47</td>
 <td style="text-align: left;">222.36</td>
 <td style="text-align: left;">2.04</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">diagStencil.sk_35_36.cnf</td>
+<td style="text-align: left;">diagStencil.sk_35_36</td>
+<td style="text-align: left;">319730</td>
+<td style="text-align: left;">1774184</td>
 <td style="text-align: left;">700.65</td>
 <td style="text-align: left;">126.27</td>
 <td style="text-align: left;">5.55</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">doublyLinkedList.sk_8_37.cnf</td>
+<td style="text-align: left;">doublyLinkedList.sk_8_37</td>
+<td style="text-align: left;">6890</td>
+<td style="text-align: left;">26918</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">457.89</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">egl.pm_N=10_L=2over.dimacs</td>
+<td style="text-align: left;">egl.pm_100steps_6int_1fract_unfairA_N=10_L=2over</td>
+<td style="text-align: left;">7593934</td>
+<td style="text-align: left;">5722907</td>
 <td style="text-align: left;">7.17</td>
 <td style="text-align: left;">6.88</td>
 <td style="text-align: left;">1.04</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">egl.pm_N=10_L=2under.dimacs</td>
+<td style="text-align: left;">egl.pm_100steps_6int_1fract_unfairA_N=10_L=2under</td>
+<td style="text-align: left;">7593934</td>
+<td style="text-align: left;">5722907</td>
 <td style="text-align: left;">7.23</td>
 <td style="text-align: left;">6.97</td>
 <td style="text-align: left;">1.04</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">egl.pm_N=7_L=2over.dimacs</td>
+<td style="text-align: left;">egl.pm_100steps_6int_1fract_unfairA_N=7_L=2over</td>
+<td style="text-align: left;">7594746</td>
+<td style="text-align: left;">5723616</td>
 <td style="text-align: left;">6.91</td>
 <td style="text-align: left;">6.91</td>
 <td style="text-align: left;">1.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">egl.pm_N=7_L=2under.dimacs</td>
+<td style="text-align: left;">egl.pm_100steps_6int_1fract_unfairA_N=7_L=2under</td>
+<td style="text-align: left;">7594746</td>
+<td style="text-align: left;">5723616</td>
 <td style="text-align: left;">6.71</td>
 <td style="text-align: left;">6.99</td>
 <td style="text-align: left;">0.96</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">LoginService2.sk_23_36.cnf</td>
+<td style="text-align: left;">LoginService2.sk_23_36</td>
+<td style="text-align: left;">11511</td>
+<td style="text-align: left;">41411</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">438.25</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">LoginService.sk_20_34.cnf</td>
+<td style="text-align: left;">LoginService.sk_20_34</td>
+<td style="text-align: left;">8200</td>
+<td style="text-align: left;">26689</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">412.95</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">lss.sk_6_7.cnf</td>
+<td style="text-align: left;">lss.sk_6_7</td>
+<td style="text-align: left;">82362</td>
+<td style="text-align: left;">259552</td>
 <td style="text-align: left;">49.91</td>
 <td style="text-align: left;">2.28</td>
 <td style="text-align: left;">21.89</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">nand.pm_100steps__N=20_K=4over.dimacs</td>
+<td style="text-align: left;">nand.pm_100steps__N=20_K=4over</td>
+<td style="text-align: left;">6500012</td>
+<td style="text-align: left;">3794066</td>
 <td style="text-align: left;">38.9</td>
 <td style="text-align: left;">39.73</td>
 <td style="text-align: left;">0.98</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">nand.pm_100steps__N=20_K=4under.dimacs</td>
+<td style="text-align: left;">nand.pm_100steps__N=20_K=4under</td>
+<td style="text-align: left;">6489412</td>
+<td style="text-align: left;">3786166</td>
 <td style="text-align: left;">41.26</td>
 <td style="text-align: left;">48.77</td>
 <td style="text-align: left;">0.85</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">nand.pm_80steps__N=20_K=2over.dimacs</td>
+<td style="text-align: left;">nand.pm_80steps__N=20_K=2over</td>
+<td style="text-align: left;">5217940</td>
+<td style="text-align: left;">3049321</td>
 <td style="text-align: left;">32.43</td>
 <td style="text-align: left;">28.32</td>
 <td style="text-align: left;">1.15</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">nand.pm_80steps__N=20_K=2under.dimacs</td>
+<td style="text-align: left;">nand.pm_80steps__N=20_K=2under</td>
+<td style="text-align: left;">5209460</td>
+<td style="text-align: left;">3043001</td>
 <td style="text-align: left;">30.48</td>
 <td style="text-align: left;">24.16</td>
 <td style="text-align: left;">1.26</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">nand.pm_80steps__N=20_K=3over.dimacs</td>
+<td style="text-align: left;">nand.pm_80steps__N=20_K=3over</td>
+<td style="text-align: left;">5219760</td>
+<td style="text-align: left;">3050350</td>
 <td style="text-align: left;">28.34</td>
 <td style="text-align: left;">23.96</td>
 <td style="text-align: left;">1.18</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">nand.pm_80steps__N=20_K=3under.dimacs</td>
+<td style="text-align: left;">nand.pm_80steps__N=20_K=3under</td>
+<td style="text-align: left;">5211280</td>
+<td style="text-align: left;">3044030</td>
 <td style="text-align: left;">34.35</td>
 <td style="text-align: left;">23.49</td>
 <td style="text-align: left;">1.46</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-10-10-UC-50.cnf</td>
+<td style="text-align: left;">or-100-10-10-UC-50</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">2479.96</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-10-10-UC-60.cnf</td>
+<td style="text-align: left;">or-100-10-10-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">870.66</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-10-1-UC-40.cnf</td>
+<td style="text-align: left;">or-100-10-1-UC-40</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1013.62</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-10-1-UC-50.cnf</td>
+<td style="text-align: left;">or-100-10-1-UC-50</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">463.82</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-10-1-UC-60.cnf</td>
+<td style="text-align: left;">or-100-10-1-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">451.37</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-10-2-UC-60.cnf</td>
+<td style="text-align: left;">or-100-10-2-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">780.3</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-10-3-UC-50.cnf</td>
+<td style="text-align: left;">or-100-10-3-UC-50</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1507.69</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-10-3-UC-60.cnf</td>
+<td style="text-align: left;">or-100-10-3-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">728.45</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-10-4-UC-50.cnf</td>
+<td style="text-align: left;">or-100-10-4-UC-50</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1026.97</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-10-4-UC-60.cnf</td>
+<td style="text-align: left;">or-100-10-4-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">849.57</td>
 <td style="text-align: left;">278.59</td>
 <td style="text-align: left;">3.05</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-10-5-UC-60.cnf</td>
+<td style="text-align: left;">or-100-10-5-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">802.48</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-10-6-UC-50.cnf</td>
+<td style="text-align: left;">or-100-10-6-UC-50</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1677.89</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-10-6-UC-60.cnf</td>
+<td style="text-align: left;">or-100-10-6-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">826.4</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-10-7-UC-60.cnf</td>
+<td style="text-align: left;">or-100-10-7-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1172.01</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-10-8-UC-60.cnf</td>
+<td style="text-align: left;">or-100-10-8-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1718.63</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-20-3-UC-60.cnf</td>
+<td style="text-align: left;">or-100-20-3-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">959.02</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-20-6-UC-60.cnf</td>
+<td style="text-align: left;">or-100-20-6-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1395.15</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-20-9-UC-50.cnf</td>
+<td style="text-align: left;">or-100-20-9-UC-50</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1824.49</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-20-9-UC-60.cnf</td>
+<td style="text-align: left;">or-100-20-9-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1361.87</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-5-10-UC-40.cnf</td>
+<td style="text-align: left;">or-100-5-10-UC-40</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1089.94</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-5-10-UC-50.cnf</td>
+<td style="text-align: left;">or-100-5-10-UC-50</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">647.65</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-5-10-UC-60.cnf</td>
+<td style="text-align: left;">or-100-5-10-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">643.69</td>
 <td style="text-align: left;">306.88</td>
 <td style="text-align: left;">2.10</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-5-1-UC-40.cnf</td>
+<td style="text-align: left;">or-100-5-1-UC-40</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1815.35</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-5-1-UC-50.cnf</td>
+<td style="text-align: left;">or-100-5-1-UC-50</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">562.37</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-5-1-UC-60.cnf</td>
+<td style="text-align: left;">or-100-5-1-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">1860.3</td>
 <td style="text-align: left;">285.06</td>
 <td style="text-align: left;">6.53</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-5-2-UC-60.cnf</td>
+<td style="text-align: left;">or-100-5-2-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">985.78</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-5-3-UC-60.cnf</td>
+<td style="text-align: left;">or-100-5-3-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">849.63</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-5-4-UC-50.cnf</td>
+<td style="text-align: left;">or-100-5-4-UC-50</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">698.86</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-5-4-UC-60.cnf</td>
+<td style="text-align: left;">or-100-5-4-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">1271.99</td>
 <td style="text-align: left;">356.89</td>
 <td style="text-align: left;">3.56</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-5-5-UC-60.cnf</td>
+<td style="text-align: left;">or-100-5-5-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">2932.04</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-5-6-UC-50.cnf</td>
+<td style="text-align: left;">or-100-5-6-UC-50</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1065.98</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-5-6-UC-60.cnf</td>
+<td style="text-align: left;">or-100-5-6-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">501.38</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-5-7-UC-50.cnf</td>
+<td style="text-align: left;">or-100-5-7-UC-50</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1764.92</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-5-7-UC-60.cnf</td>
+<td style="text-align: left;">or-100-5-7-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">520.81</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-5-8-UC-50.cnf</td>
+<td style="text-align: left;">or-100-5-8-UC-50</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">539.69</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-5-8-UC-60.cnf</td>
+<td style="text-align: left;">or-100-5-8-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">887.82</td>
 <td style="text-align: left;">244.73</td>
 <td style="text-align: left;">3.63</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-5-9-UC-40.cnf</td>
+<td style="text-align: left;">or-100-5-9-UC-40</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1093.04</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-100-5-9-UC-50.cnf</td>
+<td style="text-align: left;">or-100-5-9-UC-50</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">801.99</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-100-5-9-UC-60.cnf</td>
+<td style="text-align: left;">or-100-5-9-UC-60</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">500</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">557.33</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-10-10-UC-20.cnf</td>
+<td style="text-align: left;">or-50-10-10-UC-20</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1049.87</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-10-10-UC-30.cnf</td>
+<td style="text-align: left;">or-50-10-10-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">669.42</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-10-10-UC-40.cnf</td>
+<td style="text-align: left;">or-50-10-10-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">1970.83</td>
 <td style="text-align: left;">281.95</td>
 <td style="text-align: left;">6.99</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-10-1-UC-20.cnf</td>
+<td style="text-align: left;">or-50-10-1-UC-20</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1970.97</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-10-1-UC-30.cnf</td>
+<td style="text-align: left;">or-50-10-1-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">789.12</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-10-1-UC-40.cnf</td>
+<td style="text-align: left;">or-50-10-1-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">983.35</td>
 <td style="text-align: left;">200.49</td>
 <td style="text-align: left;">4.90</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-10-2-UC-20.cnf</td>
+<td style="text-align: left;">or-50-10-2-UC-20</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1738.47</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-10-2-UC-30.cnf</td>
+<td style="text-align: left;">or-50-10-2-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1233.27</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-10-2-UC-40.cnf</td>
+<td style="text-align: left;">or-50-10-2-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">622.46</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-10-3-UC-30.cnf</td>
+<td style="text-align: left;">or-50-10-3-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1281.1</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-10-3-UC-40.cnf</td>
+<td style="text-align: left;">or-50-10-3-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">586.98</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-10-4-UC-30.cnf</td>
+<td style="text-align: left;">or-50-10-4-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1892.03</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-10-6-UC-20.cnf</td>
+<td style="text-align: left;">or-50-10-6-UC-20</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">3538.41</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-10-6-UC-40.cnf</td>
+<td style="text-align: left;">or-50-10-6-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">617.53</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-10-7-UC-30.cnf</td>
+<td style="text-align: left;">or-50-10-7-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1078.2</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-10-7-UC-40.cnf</td>
+<td style="text-align: left;">or-50-10-7-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">588.55</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-10-8-UC-20.cnf</td>
+<td style="text-align: left;">or-50-10-8-UC-20</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">853.05</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-10-8-UC-30.cnf</td>
+<td style="text-align: left;">or-50-10-8-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">792.88</td>
 <td style="text-align: left;">191.57</td>
 <td style="text-align: left;">4.14</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-10-8-UC-40.cnf</td>
+<td style="text-align: left;">or-50-10-8-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">703.9</td>
 <td style="text-align: left;">178.89</td>
 <td style="text-align: left;">3.93</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-10-9-UC-40.cnf</td>
+<td style="text-align: left;">or-50-10-9-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1395.0</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-20-10-UC-40.cnf</td>
+<td style="text-align: left;">or-50-20-10-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1389.6</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-20-1-UC-40.cnf</td>
+<td style="text-align: left;">or-50-20-1-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1496.49</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-20-6-UC-40.cnf</td>
+<td style="text-align: left;">or-50-20-6-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1395.86</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-20-7-UC-30.cnf</td>
+<td style="text-align: left;">or-50-20-7-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">2182.23</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-20-7-UC-40.cnf</td>
+<td style="text-align: left;">or-50-20-7-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1015.01</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-20-8-UC-30.cnf</td>
+<td style="text-align: left;">or-50-20-8-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1526.18</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-20-8-UC-40.cnf</td>
+<td style="text-align: left;">or-50-20-8-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1378.7</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-20-9-UC-30.cnf</td>
+<td style="text-align: left;">or-50-20-9-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1338.82</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-20-9-UC-40.cnf</td>
+<td style="text-align: left;">or-50-20-9-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1278.2</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-5-10-UC-30.cnf</td>
+<td style="text-align: left;">or-50-5-10-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">365.28</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-5-10-UC-40.cnf</td>
+<td style="text-align: left;">or-50-5-10-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">2776.65</td>
 <td style="text-align: left;">245.56</td>
 <td style="text-align: left;">11.31</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-5-1-UC-30.cnf</td>
+<td style="text-align: left;">or-50-5-1-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">481.61</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-5-1-UC-40.cnf</td>
+<td style="text-align: left;">or-50-5-1-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">1090.46</td>
 <td style="text-align: left;">242.95</td>
 <td style="text-align: left;">4.49</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-5-2-UC-30.cnf</td>
+<td style="text-align: left;">or-50-5-2-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">752.07</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-5-2-UC-40.cnf</td>
+<td style="text-align: left;">or-50-5-2-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">445.63</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-5-3-UC-20.cnf</td>
+<td style="text-align: left;">or-50-5-3-UC-20</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">833.41</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-5-3-UC-30.cnf</td>
+<td style="text-align: left;">or-50-5-3-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">580.66</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-5-3-UC-40.cnf</td>
+<td style="text-align: left;">or-50-5-3-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">516.38</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-5-4-UC-30.cnf</td>
+<td style="text-align: left;">or-50-5-4-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">2749.81</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-5-4-UC-40.cnf</td>
+<td style="text-align: left;">or-50-5-4-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1106.13</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-5-5-UC-30.cnf</td>
+<td style="text-align: left;">or-50-5-5-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">793.33</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-5-5-UC-40.cnf</td>
+<td style="text-align: left;">or-50-5-5-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">380.94</td>
 <td style="text-align: left;">215.55</td>
 <td style="text-align: left;">1.77</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-5-6-UC-20.cnf</td>
+<td style="text-align: left;">or-50-5-6-UC-20</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">982.06</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-5-6-UC-30.cnf</td>
+<td style="text-align: left;">or-50-5-6-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">452.37</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-5-6-UC-40.cnf</td>
+<td style="text-align: left;">or-50-5-6-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">1314.08</td>
 <td style="text-align: left;">238.67</td>
 <td style="text-align: left;">5.51</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-5-7-UC-20.cnf</td>
+<td style="text-align: left;">or-50-5-7-UC-20</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">2783.15</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-5-7-UC-30.cnf</td>
+<td style="text-align: left;">or-50-5-7-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1235.04</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-5-7-UC-40.cnf</td>
+<td style="text-align: left;">or-50-5-7-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">595.01</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-5-8-UC-30.cnf</td>
+<td style="text-align: left;">or-50-5-8-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">737.02</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-5-8-UC-40.cnf</td>
+<td style="text-align: left;">or-50-5-8-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">2803.01</td>
 <td style="text-align: left;">291.36</td>
 <td style="text-align: left;">9.62</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-50-5-9-UC-30.cnf</td>
+<td style="text-align: left;">or-50-5-9-UC-30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">814.96</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-50-5-9-UC-40.cnf</td>
+<td style="text-align: left;">or-50-5-9-UC-40</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">250</td>
 <td style="text-align: left;">4100.69</td>
 <td style="text-align: left;">412.36</td>
 <td style="text-align: left;">9.94</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-10-10-UC-30.cnf</td>
+<td style="text-align: left;">or-60-10-10-UC-30</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">2410.78</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-10-10-UC-40.cnf</td>
+<td style="text-align: left;">or-60-10-10-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1490.33</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-10-1-UC-40.cnf</td>
+<td style="text-align: left;">or-60-10-1-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">2771.56</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-10-2-UC-30.cnf</td>
+<td style="text-align: left;">or-60-10-2-UC-30</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1544.71</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-10-2-UC-40.cnf</td>
+<td style="text-align: left;">or-60-10-2-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1274.68</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-10-4-UC-30.cnf</td>
+<td style="text-align: left;">or-60-10-4-UC-30</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">991.74</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-10-4-UC-40.cnf</td>
+<td style="text-align: left;">or-60-10-4-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">560.38</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-10-5-UC-40.cnf</td>
+<td style="text-align: left;">or-60-10-5-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1163.41</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-10-6-UC-30.cnf</td>
+<td style="text-align: left;">or-60-10-6-UC-30</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">2580.1</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-10-6-UC-40.cnf</td>
+<td style="text-align: left;">or-60-10-6-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1236.69</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-10-7-UC-40.cnf</td>
+<td style="text-align: left;">or-60-10-7-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">855.12</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-10-8-UC-40.cnf</td>
+<td style="text-align: left;">or-60-10-8-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">467.38</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-10-9-UC-30.cnf</td>
+<td style="text-align: left;">or-60-10-9-UC-30</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">954.53</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-10-9-UC-40.cnf</td>
+<td style="text-align: left;">or-60-10-9-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">854.48</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-20-2-UC-30.cnf</td>
+<td style="text-align: left;">or-60-20-2-UC-30</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1602.05</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-20-2-UC-40.cnf</td>
+<td style="text-align: left;">or-60-20-2-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1464.33</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-20-8-UC-40.cnf</td>
+<td style="text-align: left;">or-60-20-8-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">749.29</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-20-9-UC-30.cnf</td>
+<td style="text-align: left;">or-60-20-9-UC-30</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1543.73</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-20-9-UC-40.cnf</td>
+<td style="text-align: left;">or-60-20-9-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1405.18</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-5-10-UC-30.cnf</td>
+<td style="text-align: left;">or-60-5-10-UC-30</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1240.87</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-5-10-UC-40.cnf</td>
+<td style="text-align: left;">or-60-5-10-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">456.9</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-5-1-UC-40.cnf</td>
+<td style="text-align: left;">or-60-5-1-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">657.33</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-5-2-UC-40.cnf</td>
+<td style="text-align: left;">or-60-5-2-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1071.28</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-5-3-UC-30.cnf</td>
+<td style="text-align: left;">or-60-5-3-UC-30</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">941.71</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-5-3-UC-40.cnf</td>
+<td style="text-align: left;">or-60-5-3-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">4743.13</td>
 <td style="text-align: left;">411.85</td>
 <td style="text-align: left;">11.52</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-5-4-UC-20.cnf</td>
+<td style="text-align: left;">or-60-5-4-UC-20</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1462.01</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-5-4-UC-30.cnf</td>
+<td style="text-align: left;">or-60-5-4-UC-30</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">479.08</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-5-4-UC-40.cnf</td>
+<td style="text-align: left;">or-60-5-4-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">1281.2</td>
 <td style="text-align: left;">264.14</td>
 <td style="text-align: left;">4.85</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-5-5-UC-30.cnf</td>
+<td style="text-align: left;">or-60-5-5-UC-30</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1344.93</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-5-5-UC-40.cnf</td>
+<td style="text-align: left;">or-60-5-5-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">491.19</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-5-6-UC-20.cnf</td>
+<td style="text-align: left;">or-60-5-6-UC-20</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1448.94</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-5-6-UC-30.cnf</td>
+<td style="text-align: left;">or-60-5-6-UC-30</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">752.9</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-5-6-UC-40.cnf</td>
+<td style="text-align: left;">or-60-5-6-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">464.84</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-5-7-UC-40.cnf</td>
+<td style="text-align: left;">or-60-5-7-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1264.67</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-5-8-UC-30.cnf</td>
+<td style="text-align: left;">or-60-5-8-UC-30</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">931.13</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-5-8-UC-40.cnf</td>
+<td style="text-align: left;">or-60-5-8-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">707.67</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-5-9-UC-20.cnf</td>
+<td style="text-align: left;">or-60-5-9-UC-20</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1708.0</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-60-5-9-UC-30.cnf</td>
+<td style="text-align: left;">or-60-5-9-UC-30</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">946.87</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-60-5-9-UC-40.cnf</td>
+<td style="text-align: left;">or-60-5-9-UC-40</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">300</td>
 <td style="text-align: left;">2241.98</td>
 <td style="text-align: left;">397.49</td>
 <td style="text-align: left;">5.64</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-70-10-10-UC-40.cnf</td>
+<td style="text-align: left;">or-70-10-10-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1303.71</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-70-10-3-UC-30.cnf</td>
+<td style="text-align: left;">or-70-10-3-UC-30</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1566.39</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-70-10-3-UC-40.cnf</td>
+<td style="text-align: left;">or-70-10-3-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">545.07</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-70-10-5-UC-40.cnf</td>
+<td style="text-align: left;">or-70-10-5-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1214.49</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-70-10-6-UC-30.cnf</td>
+<td style="text-align: left;">or-70-10-6-UC-30</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1784.96</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-70-10-6-UC-40.cnf</td>
+<td style="text-align: left;">or-70-10-6-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">413.23</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-70-10-7-UC-40.cnf</td>
+<td style="text-align: left;">or-70-10-7-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">2243.87</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-70-10-8-UC-30.cnf</td>
+<td style="text-align: left;">or-70-10-8-UC-30</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">914.77</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-70-10-8-UC-40.cnf</td>
+<td style="text-align: left;">or-70-10-8-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">563.28</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-70-10-9-UC-40.cnf</td>
+<td style="text-align: left;">or-70-10-9-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1647.37</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-70-20-9-UC-40.cnf</td>
+<td style="text-align: left;">or-70-20-9-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1301.22</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-70-5-1-UC-30.cnf</td>
+<td style="text-align: left;">or-70-5-1-UC-30</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">468.93</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-70-5-1-UC-40.cnf</td>
+<td style="text-align: left;">or-70-5-1-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">2640.07</td>
 <td style="text-align: left;">272.83</td>
 <td style="text-align: left;">9.68</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-70-5-2-UC-30.cnf</td>
+<td style="text-align: left;">or-70-5-2-UC-30</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1727.86</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-70-5-2-UC-40.cnf</td>
+<td style="text-align: left;">or-70-5-2-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">811.21</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-70-5-3-UC-20.cnf</td>
+<td style="text-align: left;">or-70-5-3-UC-20</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1358.19</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-70-5-3-UC-30.cnf</td>
+<td style="text-align: left;">or-70-5-3-UC-30</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1646.17</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-70-5-3-UC-40.cnf</td>
+<td style="text-align: left;">or-70-5-3-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">985.89</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-70-5-4-UC-40.cnf</td>
+<td style="text-align: left;">or-70-5-4-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">893.59</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-70-5-5-UC-30.cnf</td>
+<td style="text-align: left;">or-70-5-5-UC-30</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">964.86</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-70-5-5-UC-40.cnf</td>
+<td style="text-align: left;">or-70-5-5-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">574.8</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-70-5-6-UC-30.cnf</td>
+<td style="text-align: left;">or-70-5-6-UC-30</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">2041.92</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-70-5-6-UC-40.cnf</td>
+<td style="text-align: left;">or-70-5-6-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">1242.62</td>
 <td style="text-align: left;">263.64</td>
 <td style="text-align: left;">4.71</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-70-5-7-UC-40.cnf</td>
+<td style="text-align: left;">or-70-5-7-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">750.63</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-70-5-8-UC-30.cnf</td>
+<td style="text-align: left;">or-70-5-8-UC-30</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1116.62</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-70-5-8-UC-40.cnf</td>
+<td style="text-align: left;">or-70-5-8-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">605.83</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">or-70-5-9-UC-30.cnf</td>
+<td style="text-align: left;">or-70-5-9-UC-30</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">1025.62</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">or-70-5-9-UC-40.cnf</td>
+<td style="text-align: left;">or-70-5-9-UC-40</td>
+<td style="text-align: left;">140</td>
+<td style="text-align: left;">350</td>
 <td style="text-align: left;">1759.98</td>
 <td style="text-align: left;">302.79</td>
 <td style="text-align: left;">5.81</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">parity.sk_11_11.cnf</td>
+<td style="text-align: left;">parity.sk_11_11</td>
+<td style="text-align: left;">13116</td>
+<td style="text-align: left;">47506</td>
 <td style="text-align: left;">195.62</td>
 <td style="text-align: left;">492.49</td>
 <td style="text-align: left;">0.40</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">PhaseService.sk_14_27.cnf</td>
+<td style="text-align: left;">PhaseService.sk_14_27</td>
+<td style="text-align: left;">1686</td>
+<td style="text-align: left;">5655</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">220.39</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">polynomial.sk_7_25.cnf</td>
+<td style="text-align: left;">polynomial.sk_7_25</td>
+<td style="text-align: left;">313</td>
+<td style="text-align: left;">1027</td>
 <td style="text-align: left;">128.09</td>
 <td style="text-align: left;">0.01</td>
 <td style="text-align: left;">12809.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">SetTest.sk_9_21.cnf</td>
+<td style="text-align: left;">SetTest.sk_9_21</td>
+<td style="text-align: left;">33744</td>
+<td style="text-align: left;">148948</td>
 <td style="text-align: left;">5.85</td>
 <td style="text-align: left;">0.77</td>
 <td style="text-align: left;">7.60</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">tutorial1.sk_1_1.cnf</td>
+<td style="text-align: left;">tutorial1.sk_1_1</td>
+<td style="text-align: left;">67</td>
+<td style="text-align: left;">66</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">0.0</td>
 <td style="text-align: left;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">tutorial2.sk_3_4.cnf</td>
+<td style="text-align: left;">tutorial2.sk_3_4</td>
+<td style="text-align: left;">16726</td>
+<td style="text-align: left;">77653</td>
 <td style="text-align: left;">3.66</td>
 <td style="text-align: left;">0.32</td>
 <td style="text-align: left;">11.44</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">UserServiceImpl.sk_8_32.cnf</td>
+<td style="text-align: left;">UserServiceImpl.sk_8_32</td>
+<td style="text-align: left;">1509</td>
+<td style="text-align: left;">5009</td>
 <td style="text-align: left;">2175.1</td>
 <td style="text-align: left;">159.42</td>
 <td style="text-align: left;">13.64</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
