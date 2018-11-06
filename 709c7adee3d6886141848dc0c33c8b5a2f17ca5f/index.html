@@ -33,10 +33,11 @@ table#t01 {
 </table>
 
 <p>
-    Instructions for running different algorithms:
+<u>Instructions for running different algorithms:</u> <br><br>
 
-    You will need `docker`.
-
+You will need `docker` and the benchmark-files should be in DIMACS format. The source for each algorithm is at `/scalmc/src/scalmc.cpp`. <br> A prebuilt static binary already exist at `/scalmc/build/`.To rebuild the binary
+    after changing the source run `make` from `/scalmc/build` directory. <br>
+    
     <ul>
         <li> SparseCount </li>
         <code>
@@ -53,7 +54,7 @@ table#t01 {
             docker run -it bhavishya/scalmc bash <br>
             /scalmc/build/scalmc `benchmark-file`
         </code>
-        <li> Toeplitz </li>
+        <li> Toeplitz-ApproxMC2 </li>
         <code>
             docker run -it bhavishya/toeplitz bash <br>
             /scalmc/build/scalmc `benchmark-file`
