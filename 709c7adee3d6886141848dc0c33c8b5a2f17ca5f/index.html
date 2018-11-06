@@ -32,6 +32,34 @@ table#t01 {
 
 </table>
 
+<p>
+    Instructions for running different algorithms:
+
+    You will need `docker`.
+
+    <ul>
+        <li> SparseCount </li>
+        <code>
+            docker run -it bhavishya/sparsecount bash <br>
+            /scalmc/build/scalmc `benchmark-file`
+        </code>
+        <li> SparseCount2 </li>
+        <code>
+            docker run -it bhavishya/sparsecount2 bash <br>
+            /scalmc/build/scalmc `benchmark-file`
+        </code>
+        <li> ApproxMC2 </li>
+        <code>
+            docker run -it bhavishya/scalmc bash <br>
+            /scalmc/build/scalmc `benchmark-file`
+        </code>
+        <li> Toeplitz </li>
+        <code>
+            docker run -it bhavishya/toeplitz bash <br>
+            /scalmc/build/scalmc `benchmark-file`
+        </code>
+    </ul>
+</p>
 
 </body>
 </html>
